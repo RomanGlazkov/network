@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  height: 100vh;
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.container__elem {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-top {
+  justify-content: center;
+}
+
+.container-bottom {
+  justify-content: flex-start;
+}
+
+.btn {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.form-info {
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.form-element {
+  margin-bottom: 10px;
+}
+
+.info {
+  box-sizing: border-box;
+  height: 90%;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+  padding: 50px 0;
+}
+
+.server-info {
+  border: 2px dotted #bc8f8f;
+}
+
+.server-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.info-header {
+  margin-bottom: 20px;
+}
+
+.server-header__name {
+  margin-right: 5px;
+}
+
+.server-header__status {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color: #ff1a1a;
+  border-radius: 50%;
+}
+
+.address-btn {
+  min-width: 100px;
+  cursor: default;
+}
+
+.list {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.list-title {
+  margin-bottom: 10px;
+}
+
+.list-button {
+  width: 40%;
+}
+
+.online {
+  background-color: #7fff00;
+}
+
+.server-name {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.server-status {
+  margin-bottom: 20px;
+}
+
+.user-info {
+  border: 2px dotted #008080;
+}
+
+.chat-window {
+  width: 50%;
+  height: 150px;
+  max-height: 150px;
+  overflow: auto;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: left;
+  padding: 5px;
+}
+
+.guide {
+  margin: 10px 0 20px;
+}
+
+.error {
+  position: absolute;
+  background-color: #c32033;
+  height: 3rem;
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.hidden {
+  display: none;
+}

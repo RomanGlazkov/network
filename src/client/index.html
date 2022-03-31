@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network</title>
+</head>
+<body>
+  <div class="app">
+    <form class="form" name="create-server">
+      <div class="form-info">Чтобы создать сервер, введите номер узла, а также имя и тип сервера:</div>
+      <div class="form-element">
+        <label for="node-number" class="form-element__label">Номер узла (от 0 до 255)</label>
+        <input type="number" id="node-number" name="node-number" min="0" max="255" required>
+      </div>
+      <div class="form-element">
+        <label for="server-name" class="form-element__label">Имя сервера</label>
+        <input type="text" id="server-name" name="server-name" required>
+      </div>
+      <div class="form-element">
+        <select name="server-type" size="2" required>
+          <option value="public">Публичный</option>
+          <option value="private">Частный</option>
+        </select>
+      </div>
+      <input type="submit" value="Создать сервер" class="btn">
+    </form>
+    <div class="container" hidden>
+      <div class="error hidden"></div>
+      <div class="container__elem container-top">
+        <div class="info server-info">
+          <div class="server-header info-header">
+            <h2 class="server-header__name"></h2>
+            <div class="server-header__status" title="Не подключен к сети"></div>
+          </div>
+          <button class="btn network-btn">Подключиться к сети</button>
+          <div class="server-buttons">
+            <button class="btn address-btn hidden">Мой адрес</button>
+            <button class="btn connect-btn hidden">Подключиться к узлу</button>
+          </div>
+          <div class="server-notifications"></div>
+        </div>
+      </div>
+      <div class="container__elem container-bottom">
+        <div class="info user-info" hidden>
+          <div class="user-header info-header">
+            <h4 class="user-header__role"></h4>
+          </div>
+          <div class="user-buttons">
+            <button class="btn server-btn" data-action="disconnectFromServer">Отключиться от сервера</button>
+            <button class="btn change-role-btn" data-action="changeRole">Сменить роль</button>
+            <button class="btn block-user-btn" data-action="blockUser">Заблокировать пользователя</button>
+            <button class="btn add-message-btn" data-action="addMessage">Написать в чат</button>
+            <button class="btn leave-chat-btn" data-action="leaveChat">Покинуть чат</button>
+            <button class="btn show-messages-btn" data-action="showMessages">Посмотреть историю чата</button>
+          </div>
+          <div class="user-notifications">
+            <div class="chat hidden" data-action="addMessage">
+              <form name="publish">
+                <input type="text" name="message">
+                <input type="submit" value="Отправить">
+              </form>
+              <div class="chat-messages chat-window"></div>
+            </div>
+            <div class="chat-history chat-window hidden" data-action="showMessages"></div>
+            <div class="users hidden" data-action="changeRole"></div>
+            <div class="users hidden" data-action="blockUser"></div>
+          </div>
+        </div>
+        <form name="connect-to-server">
+          <div>Инструкция по подключению к серверу:</div>
+          <ul class="guide">
+            <li>Чтобы подключиться в качестве <b>администратора</b>, введите пароль</li>
+            <li>Чтобы подключиться в качестве <b>участника</b>, введите имя</li>
+            <li>Чтобы подключиться в качестве <b>гостя</b>, оставьте поле пустым</li>
+          </ul>
+          <input type="text" name="connect-input">
+          <input type="submit" value="Подключиться" class="btn">
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
